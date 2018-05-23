@@ -80,7 +80,10 @@ Amber::Server.configure do |app|
     delete "/models/village/:id/", VillageAdminController, :delete
 
     # Relations
+    # BuildQueueBuilding
     get "/relations/buildqueuebuilding/", BuildQueueBuildingAdminController, :index
+    get "/relations/buildqueuebuilding/:id_build_queue/", BuildQueueBuildingAdminController, :build_queue_index
+
     get "/relations/buildingfurnishing/", BuildingFurnishingAdminController, :index
     get "/relations/buildingrequirement/", BuildingRequirementAdminController, :index
     get "/relations/buildingresource/", BuildingResourceAdminController, :index
